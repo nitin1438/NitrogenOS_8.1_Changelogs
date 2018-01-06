@@ -1,0 +1,229 @@
+====================
+     01-06-2018
+====================
+
+
+   * bionic/
+76c6d0f3b Merge tag 'android-8.1.0_r7' into o2
+
+   * bootable/recovery/
+753735d Merge tag 'android-8.1.0_r7' into o2
+
+   * build/make/
+0c2059a31 target: Build black theme
+06295824b target: overlays: Refactor sysui overlay to system [2/2]
+5720efea8 core: Build Settings Dark UI overlay
+bd1681c66 Merge tag 'android-8.1.0_r7' into o2
+c19c46a6c [1/2] build: add OTA script do delete package cache
+
+   * build/soong/
+b82cc1a Merge tag 'android-8.1.0_r7' into o2
+
+   * device/xiaomi/kenzo/
+c6aa2a3 rootdir: rework rmt_storage run
+
+   * external/strace/
+5539dcdc Revert "Update strace to 4.18."
+
+   * frameworks/av/
+3f5c81374 audio: hold effect mutex when releasing effect engine
+fd98f4f0b audiopolicy: fix unexpected output selection for direct pcm usecase
+e6127170b audiopolicy: fix wrong volume db value for voice call stream
+c6635e7fa audioflinger: fix for playback paused during track transition
+dfe6b15c1 audio: Update anchor time for offload playback post resume
+dd2bf2a28 audio flinger: Fix native crash during underruns for patch track
+f42f2d895 Merge tag 'android-8.1.0_r7' into o2
+
+   * frameworks/base/
+f87b0975857 ColorOM: Support black theme
+6eecc12fc15 DarkMode: add default attributes for settings
+50adc3f3940 Darkmode: Don't override textColorPrimaryInverse
+235627b3fd2 base: add support for dark overlays
+4091a8160c5 Merge tag 'android-8.1.0_r7' into o2
+
+   * frameworks/native/
+a667de3e4 Merge tag 'android-8.1.0_r7' into o2
+
+   * frameworks/opt/telephony/
+8433c3230 Merge tag 'android-8.1.0_r7' into o2
+
+   * hardware/interfaces/
+8c2a5408 Merge tag 'android-8.1.0_r7' into o2
+
+   * hardware/qcom/audio/
+86eb06a Merge tag 'android-8.1.0_r7' into o2
+
+   * hardware/qcom/display/
+774b827c Merge tag 'android-8.1.0_r7' into o2
+
+   * hardware/qcom/gps/
+a31ae2c Merge tag 'android-8.1.0_r7' into o2
+
+   * hardware/qcom/media/
+fd93494 Merge tag 'android-8.1.0_r7' into o2
+
+   * hardware/ril/
+8b97203 Merge tag 'android-8.1.0_r7' into o2
+
+   * packages/apps/DeskClock/
+8feaf4bfe Merge tag 'android-8.1.0_r7' into o2
+
+   * packages/apps/Messaging/
+a88648d Merge tag 'android-8.1.0_r7' into o2
+
+   * packages/apps/NitrogenSettings/
+439e200 Fix dialog colors for dark and black themes
+caa9fcb Revert "[2/2] configure SystemUI theme"
+e00d5cc Clean translations and fix RU
+
+   * packages/apps/PackageInstaller/
+76df283a Merge tag 'android-8.1.0_r7' into o2
+
+   * packages/apps/Settings/
+57a54e5fef ColorOM: Support black theme
+7af27a2312 Settings: Expose suggestions background color
+8aaa616a16 Settings: Introduce Color Manager (ColorOM)
+569a119ff6 ThemePreference: Disable inconsistent null check for availibility
+6aae486de3 ThemePreferenceController: Remove generic dark overlay from list
+f2843f1c54 Merge tag 'android-8.1.0_r7' into o2
+
+   * packages/inputmethods/LatinIME/
+db139d165 Merge tag 'android-8.1.0_r7' into o2
+
+   * packages/services/Telecomm/
+98e4e3fe Merge tag 'android-8.1.0_r7' into o2
+
+   * packages/services/Telephony/
+814724da Merge tag 'android-8.1.0_r7' into o2
+
+   * system/bt/
+0f3c36e9 Merge tag 'android-8.1.0_r7' into o2
+
+   * system/core/
+569ffde9d Merge tag 'android-8.1.0_r7' into o2
+
+   * system/extras/
+66d35924 Merge tag 'android-8.1.0_r7' into o2
+
+   * system/hwservicemanager/
+315df2b Merge tag 'android-8.1.0_r7' into o2
+
+   * system/media/
+c28abae8 Merge tag 'android-8.1.0_r7' into o2
+
+   * system/nfc/
+19ff889 Merge branch 'system_nfc' of https://github.com/nitin1438/nitrogen_o2 into HEAD
+9301948 Merge tag 'android-8.1.0_r7' into o2
+
+   * system/sepolicy/
+17294e21 Merge tag 'android-8.1.0_r7' into o2
+
+   * system/vold/
+6c1cb7b keymaster: Add support for upgrade_key for FDE
+9374469 Merge tag 'android-8.1.0_r7' into o2
+
+   * vendor/nitrogen/
+986bb0c add support for building custom themes
+f5243a3 [2/2] omni: add OTA script do delete package cache
+
+====================
+     01-05-2018
+====================
+
+
+   * system/nfc/
+ebaf593 bcm2079x: fix chip id format strings
+d4458f0 bcm2079x: Add checks to prevent NULL pointer deference in gki_init_free_queue()
+415da0c bcm2079x: Replace pthread_exit with return to avoid memory leak
+2a708b8 bcm2079x: [DNM] Hardcode nci_ctrl_size to Nougat value
+6797996 bcm2079x: fix crash in userial_close_thread()
+
+====================
+     01-04-2018
+====================
+
+
+====================
+     01-03-2018
+====================
+
+
+====================
+     01-02-2018
+====================
+
+
+   * device/oneplus/oneplus3/
+af63f99 init.qcom.usb: fix rndis after removing init.qcom.usb.sh
+100f901 init.qcom.power: block some wakelocks
+
+   * kernel/oneplus/msm8996/
+848b414efad wakeup: add some wakelocks from cheeseburger
+
+====================
+     01-01-2018
+====================
+
+
+====================
+     12-31-2017
+====================
+
+
+====================
+     12-30-2017
+====================
+
+
+   * device/oneplus/oneplus3/
+0260b1c init.qcom.power: Tweak interactive governor by By Sasha (aka Inkyz \ Sycreed) Link - https://4pda.ru/forum/index.php?showtopic=752764&st=9280#entry68532585
+
+====================
+     12-29-2017
+====================
+
+
+   * frameworks/base/
+383340b30b0 Brightness on footer: improve vpn footer warnings layout
+5d300246fbf Battery tile: fix label when charging
+905e6f842a3 [1/2] base: poor man battery style tweaks
+d97941156af Allow to disable qs footer warnings [1/2]
+
+   * kernel/xiaomi/kenzo/
+584f7c9cf85 proc: Remove additional SafetyNet flags from /proc/cmdline
+4c7b50b55d9 proc: Remove verifiedbootstate flag from /proc/cmdline
+d41b936ea0f Revert "SafetyNet bypass: Show androidboot.verifiedbootstate=green"
+
+====================
+     12-28-2017
+====================
+
+
+   * device/oneplus/oneplus3/
+5612a84 Use hardware feature definition to indicate Passpoint support Bug: 36886243 Test: Manual test Change-Id: I1a78cb4ca7fd48b47467c7be92a4a821ff4908d0
+
+   * device/xiaomi/kenzo/
+bf0a04a Use hardware feature definition to indicate Passpoint support Bug: 36886243 Test: Manual test Change-Id: I1a78cb4ca7fd48b47467c7be92a4a821ff4908d0
+
+   * hardware/qcom/bt/
+070e117 Fix msm8960 building
+
+   * hardware/qcom/gps/
+a9af0ed msm8960: Add support for IPV6 in AGPS Interface
+
+   * hardware/qcom/media/
+11ccf93 libstagefrighthw: Remove padding in encoder_nativehandle_buffer_type
+3a74eb5 mm-video-legacy: venc: update metadata-type used for HAL1 based  recording
+31d1764 mm-video: vidc: Remove hardcoding of BufCountActual
+215b747 mm-video: venc: update color format in port-def
+16e600f mm-video: venc: Use correct flag for buffer index selection
+c22488c mm-video-legacy: venc: update allocation-size check for meta-buffer
+d0e6256 media: vdec: Include nativebase headers
+dcf629b media: Also add msm8960 symlink to msm8974
+
+   * packages/apps/NitrogenSettings/
+513f9af Allow to disable qs footer warnings [2/2]
+
+   * packages/apps/Settings/
+8930ea93e2 PowerUsageSummary: Remove cross-listed preferences
+040eff3036 [2/2] Settings: poor man battery style tweaks for now just add hide/show image and or percentage
