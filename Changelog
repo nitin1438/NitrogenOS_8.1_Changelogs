@@ -1,557 +1,242 @@
 ====================
-     01-12-2018
+     01-29-2018
 ====================
 
-
-   * device/qcom/sepolicy/
-95388fe Fix missed files
-
-   * external/tinycompress/
-43f595b Move cplay to vendor.
-
-   * frameworks/av/
-c3c50b49d libstagefright: use 64-bit usage for native_window_set_usage
-
-   * frameworks/base/
-0ccfe0f4c71 Hide tiles title: longpress will launch detail view
-50ba239aa74 Prevent deadlock when going out of idle state
-2a9e6259307 Bluetooth: Avoiding NULL pointer dereferences
-5ed5ef7f9ea BT:Crash occured due to null pointer exception.
-
-   * kernel/oneplus/msm8996/
-15d4611446a0 msm: mdss: KCAL: disable igc update
-c718d4289feb msm: mdss: KCAL: Send a pp display commit when changes are made
-da4b245e9ce7 mdss mdp: kcal for mdss_mdp_v1_7
-55368d6664f6 f2fs: deny accessing encryption policy if encryption is off
-1e736dc7322c f2fs: inject fault in inc_valid_node_count
-79192127d2a3 f2fs: expose quota information in debugfs
-a782ac561296 f2fs: separate nat entry mem alloc from nat_tree_lock
-31b627eb1ef6 f2fs: validate before set/clear free nat bitmap
-86f39f827b15 f2fs: avoid opened loop codes in __add_ino_entry
-0144eb509007 f2fs: apply write hints to select the type of segments for buffered write
-09e23bc08f0e f2fs: introduce scan_curseg_cache for cleanup
-d74c10c2961a f2fs: optimize the way of traversing free_nid_bitmap
-8c7166a5e5cd f2fs: keep scanning until enough free nids are acquired
-42055bf5dc20 f2fs: trace checkpoint reason in fsync()
-a12253f9e521 f2fs: keep isize once block is reserved cross EOF
-6a02bd4724c1 f2fs: avoid race in between GC and block exchange
-62310ca8ec37 f2fs: save a multiplication for last_nid calculation
-b49d4e611106 f2fs: fix summary info corruption
-b026490f6fa3 f2fs: remove dead code in update_meta_page
-3cb727e3cadc f2fs: remove unneeded semicolon
-d402f01d389e f2fs: don't bother with inode->i_version
-55a3aa4e7e2c f2fs: check curseg space before foreground GC
-e7bd3c37aacd f2fs: use rw_semaphore to protect SIT cache
-ec6f1a766217 f2fs: support quota sys files
-1b5fc8ab591b f2fs: add quota_ino feature infra
-acd12a7d9258 f2fs: optimize __update_nat_bits
-49063b6f5472 f2fs: modify for accurate fggc node io stat
-c295fd6ab0b8 Revert "f2fs: handle dirty segments inside refresh_sit_entry"
-0d540b01f298 f2fs: add a function to move nid
-f9665c9f78a2 f2fs: export SSR allocation threshold
-5221ce274746 f2fs: give correct trimmed blocks in fstrim
-2b8ffb618755 f2fs: support bio allocation error injection
-32d0c97d71c8 f2fs: support get_page error injection
-199ea99af7ac f2fs: add missing sysfs description
-44f182537818 f2fs: support soft block reservation
-440ec42919d1 f2fs: handle error case when adding xattr entry
-d69be6d9cd13 f2fs: support flexible inline xattr size
-7ae3cca5bb18 f2fs: show current cp state
-1f151a0e7580 f2fs: add missing quota_initialize
-d16cf9677796 f2fs: show # of dirty segments via sysfs
-778ff444d032 f2fs: stop all the operations by cp_error flag
-0462b691b207 f2fs: remove several redundant assignments
-29f2f84875d6 f2fs: avoid using timespec
-b0b751f52aa2 f2fs: fix to correct no_fggc_candidate
-af4d3bb6af48 Revert "f2fs: return wrong error number on f2fs_quota_write"
-8350f9975fa6 f2fs: remove obsolete pointer for truncate_xattr_node
-7bec9af01e0a f2fs: retry ENOMEM for quota_read|write
-059315ffe605 f2fs: limit # of inmemory pages
-31570b004353 f2fs: update ctx->pos correctly when hitting hole in directory
-fa881d4fbdb7 f2fs: relocate readahead codes in readdir()
-334d72556efe f2fs: allow readdir() to be interrupted
-620ebfe07988 f2fs: trace f2fs_readdir
-3a1300a18488 f2fs: trace f2fs_lookup
-0f9dc8f61e54 f2fs: skip searching non-exist range in truncate_hole
-d4b50c702e22 FIX: f2fs: expose some sectors to user in inline data or dentry case
-36c24028f8f0 f2fs: avoid stale fi->gdirty_list pointer
-5d33a765b786 f2fs/crypto: drop crypto key at evict_inode only
-83407a225fda f2fs: fix to avoid race when accessing last_disk_size
-5fd9f4069867 f2fs: Fix bool initialization/comparison
-d83b72cfe05c f2fs: give up CP_TRIMMED_FLAG if it drops discards
-6fa235f56feb f2fs: trace f2fs_remove_discard
-47c22c364b1d f2fs: reduce cmd_lock coverage in __issue_discard_cmd
-5972c0c291c3 f2fs: split discard policy
-66fe933a526c f2fs: wrap discard policy
-6ef8d5b53547 f2fs: support issuing/waiting discard in range
-27d900a71b67 f2fs: fix to flush multiple device in checkpoint
-3926f0166080 f2fs: enhance multiple device flush
-005af4df5b98 f2fs: fix to show ino management cache size correctly
-89353f82eecc f2fs: drop FI_UPDATE_WRITE tag after f2fs_issue_flush
-cae91cdbee47 f2fs: obsolete ALLOC_NID_LIST list
-4e58f2bfc199 f2fs: convert inline data for direct I/O & FI_NO_PREALLOC
-ae5ae5a8bdb2 f2fs: allow readpages with NULL file pointer
-b8b208596fe6 f2fs: show flush list status in sysfs
-eadc01deecfb f2fs: introduce read_xattr_block
-d74abcd6c4d8 f2fs: introduce read_inline_xattr
-8d9026022c05 Revert "f2fs: reuse nids more aggressively"
-638c53ca13fe Revert "f2fs: node segment is prior to data segment selected victim"
-f1281bb70c25 FROMLIST: f2fs: expose some sectors to user in inline data or dentry case
-4c1275d4ed07 UPSTREAM: f2fs: fix potential panic during fstrim
-b745a639ae5e f2fs: add lazytime mount option
-9f951ced0ee5 vfs: add support for a lazytime mount option
-fee54d299ed8 f2fs: hurry up to issue discard after io interruption
-068d74b4ea8e f2fs: fix to show correct discard_granularity in sysfs
-9d976c9a8ec0 f2fs: detect dirty inode in evict_inode
-4c76c4b2b4fd f2fs: clear radix tree dirty tag of pages whose dirty flag is cleared
-00e66b599c59 f2fs: speed up gc_urgent mode with SSR
-ac6299810908 f2fs: better to wait for fstrim completion
-7bf26a30e22a f2fs: avoid race in between read xattr & write xattr
-3b7a9db092a5 f2fs: make get_lock_data_page to handle encrypted inode
-3b49fb73e795 f2fs: use generic terms used for encrypted block management
-f3bad7101fa6 f2fs: introduce f2fs_encrypted_file for clean-up
-3481d4c3ab1f Revert "f2fs: add a new function get_ssr_cost"
-96edc3acf28e f2fs: constify super_operations
-f55a4b3707a4 f2fs: fix to wake up all sleeping flusher
-ad7d5aa64c06 f2fs: avoid race in between atomic_read & atomic_inc
-e6c2203dcd65 f2fs: remove unneeded parameter of change_curseg
-af1c5f2f9345 f2fs: update i_flags correctly
-3daa0d09a10d f2fs: don't check inode's checksum if it was dirtied or writebacked
-2be003a99479 f2fs: don't need to update inode checksum for recovery
-62044cdcd525 f2fs: trigger fdatasync for non-atomic_write file
-09b59f9c5637 f2fs: fix to avoid race in between aio and gc
-8107d45b705c f2fs: wake up discard_thread iff there is a candidate
-87eb44e89d3b f2fs: return error when accessing insane flie offset
-d58d39c4411b f2fs: trigger normal fsync for non-atomic_write file
-aa674f86edbe f2fs: clear FI_HOT_DATA correctly
-68354c55c54b f2fs: fix out-of-order execution in f2fs_issue_flush
-2deb0b238875 f2fs: issue discard commands if gc_urgent is set
-f11cec8bdc26 f2fs: remove unused function overprovision_sections
-d2f16e95783a f2fs: add tracepoint for f2fs_gc
-c62b26c4b8f0 f2fs: retry to revoke atomic commit in -ENOMEM case
-421d2fe4a83e f2fs: let fill_super handle roll-forward errors
-bfaffcb7910c f2fs: merge equivalent flags F2FS_GET_BLOCK_[READ|DIO]
-4046fe198178 f2fs: support journalled quota
-504d72121c11 f2fs: fix potential overflow when adjusting GC cycle
-06f07812ff28 f2fs: avoid unneeded sync on quota file
-aa80ce8838e1 f2fs: introduce gc_urgent mode for background GC
-52cc8cc98eda f2fs: fix the size value in __check_sit_bitmap
-336b13a88d57 f2fs: add app/fs io stat
-1151c5406837 f2fs: do not change the valid_block value if cur_valid_map was wrongly set or cleared
-61eff40e3b09 f2fs: update cur_valid_map_mir together with cur_valid_map
-c5cd78fc4c2a f2fs: use printk_ratelimited for f2fs_msg
-d7255451b534 f2fs: expose features to sysfs entry
-14b76760673e f2fs: support inode checksum
-9973697a1075 f2fs: return wrong error number on f2fs_quota_write
-6256fea7e639 f2fs: provide f2fs_balance_fs to __write_node_page
-6d28d550c18e f2fs: introduce f2fs_statfs_   *
-f3ed5a9e43ea f2fs: don't need to wait for node writes for atomic write
-2b5b5a4dce40 f2fs: avoid naming confusion of sysfs init
-fccdd17d3638 f2fs: support    * quota
-bde21d64cb34 f2fs: record quota during dot{,dot} recovery
-efda3c64478b f2fs: enhance on-disk inode structure scalability
-0180d35a0df1 f2fs: make max inline size changeable
-e98d7796c593 f2fs: preserve i_mode if __f2fs_set_acl() fails
-76ff8ed411e9 f2fs: alloc new nids for xattr block in recovery
-3951fcfebce9 f2fs: spread struct f2fs_dentry_ptr for inline path
-1fb3cbf0f3ac f2fs: remove unused input parameter
-bc44490d47fa FROMLIST: f2fs: introduce discard_granularity sysfs entry
-c7439cf7d975 FROMLIST: f2fs: use IPU for cold files
-743386f4c744 FROMLIST: f2fs: make background threads of f2fs being aware of freezing
-
-   * packages/apps/NitrogenSettings/
-daba684 Hungarian translation for NitrogenSettings
-
-====================
-     01-11-2018
-====================
-
-
-   * build/make/
-a785d2f3b build: add org.codeaurora to package whitelist
-
-   * device/oneplus/oneplus3/
-75e8d2e op3(t): switch to xml audio policy included op3(t): add audio routing for AUDIO_DEVICE_OUT_USB_HEADSET op3(t): use shared audio policy files from av
-db57104 op3(t): lets do the kernel warp again
-
-   * frameworks/base/
-59e3f4c609c Add @hide to fix build
-
-   * kernel/oneplus/msm8996/
-7d08bda8b877 mdss_fb: add backlight dimmer option
-3c5ed92281ff Optimize the display effects of SRGB and dci-p3 from old branch
-107b36a25463 defconfig: Add SOUND_CONTROL
-faaa59455add Add a simple api to query the display state (on/off) at any point in time
-12f916ef7672 ASoC: wcd9335: prevent speaker gain from being reset
-1beeabd37f17 ASoC: wcd9335: add analog headphone gain
-2cad116f3964 ASoC: wcd9335: fix speaker gain controls
-31cfbfec95b5 ASoC: wcd9335: add mic gain and speaker gain for OnePlus3
-9bdd4f2948af ASoC: wcd9335: Sound control
-d0864bac7e09 cpu: Don't allow CPUs in the power cluster to be unplugged
-aaa8027f0874 workqueue: Schedule workers on CPU0 or CPU0/CPU1 by default
-710b8e0c6778 clk: msm: clock-cpu-8996: Use CLKFLAG_NO_RATE_CACHE for perfcl_hf_mux
-823585211e83 cpufreq: interactive: Skip timer when policy->min == policy->max
-e1f3495d88cf qcom-cpufreq: Use CLKFLAG_NO_RATE_CACHE
-2b2a9882cc0b cpu_input_boost: Decrease screen unblank boost to 2s
-ae42e8522eb1 cpu_input_boost: Use power efficient workqueues
-a372521b85d8 defconfig: add cpu_input_boost and clean others
-ce68c9425f7d cpu_input_boost: Prevent panics on init due to race conditions
-c7d467f02177 cpu_input_boost: Fix up dangling return in validate_cpu_freq()
-26b70681df11 cpu_input_boost: Ensure validate_cpu_freq() only uses valid freqs
-8e9a14b42eb4 cpu_input_boost: Remove scheduler boost on screen wake
-4a33b442ec23 cpu_input_boost: Make get_valid_cpufreq() usage hotplug-safe
-2a1c91a9a7ea cpu_input_boost: Fix checkpatch.pl warnings and clean up some styling
-e44cc30a84f9 cpu_input_boost: Fix trivial unsigned integer underflow
-4086cf6d79c9 cpu_input_boost: Validate input boost frequencies
-dd35373c9765 cpu_input_boost: Enable scheduler boost on screen wake
-65a530888a51 cpu_input_boost: Perform load assessment based on policy->cur
-ee0c4e977187 cpu_input_boost: Increase duration for screen-wake boost to 3000 ms
-e219e9448cbc cpu_input_boost: Make boosting more dynamic and efficient
-2fc55f4e4b02 cpu_input_boost: Don't extend little CPU's boost duration
-2abdb8b73c30 cpu_input_boost: Don't sleep in atomic context for continuous boosts
-d41730505430 cpu_input_boost: Improve efficiency when there is constant input
-d06229cdb73a cpu_input_boost: Boost multiple CPUs more often
-b584fe7f3782 cpu_input_boost: Trigger max boost when button is pressed during suspend
-b94a78ef2321 cpu_input_boost: Boost on button input
-ff6e391e1622 cpu_input_boost: Use FB_EARLY_EVENT_BLANK for unblank boost
-be39df3e2bba cpu_input_boost: Give fb_boost_nb the highest priority
-8fa08da114d3 cpu_input_boost: Restructure for big.LITTLE CPUs
-6f979deb2953 cpu_input_boost: Remove WQ_NON_REENTRANT
-f31735db5922 cpu_input_boost: Use fixed-width integer types for local variables
-2e7e30549450 cpu_input_boost: Remove unnecessary kzallocs
-ca2050a506d8 cpu_input_boost: Clean up code style
-de96d740bb5b cpu_input_boost: Increase framebuffer boost duration to 1100 ms
-2680623d51a2 cpu_input_boost: Fix synchronization issues
-9a8bcc8009ee cpu_input_boost: Remove module references
-27dabbf5771c cpu_input_boost: Remove thread-migration boosting and clean up
-9a5b51310733 cpu_input_boost: Remove sync_threshold to recover from regression
-b9047954cf39 cpu_input_boost: Rewrite to use dual-core boosting and clean up
-368f79cb09de cpu_input_boost: Increase unblank-boost duration to 900ms
-32369512f0e9 cpu_input_boost: Reduce input-boost duration
-f33c6e742f48 cpu_input_boost: Remove input-boost frequency limitations
-71c3d6384304 cpu_input_boost: Remove boost on framebuffer blank
-f490157f72d1 cpu_input_boost: Add boosting on thread migration
-4fbed4a47c10 cpu_input_boost: Boost on framebuffer blank/unblank
-27c44253416c cpu_input_boost: Clean up and fix bugs
-cd31154fb77c cpu_input_boost: Remove deprecated sprintf usage
-46102f5b655e cpu_input_boost: Minor clean-up in notifier
-a9ffdce35809 cpu_input_boost: Run all workers on CPU0
-8ec3be2476fe cpu_input_boost: Add support for userspace control
-1e52f892cbd0 cpu_input_boost: Update boost duration equation
-75769d38dd05 cpu_input_boost: Remove redundant calculations and logic
-fa006b981a65 cpu_input_boost: Remove cpufreq get/put API usage
-588cf28bc41e cpu_input_boost: Remove spin locks
-3554e5fea6b7 cpu_input_boost: Make long function names shorter and more consistent
-59e038fbfb06 cpu_input_boost: Use spinlocks instead of mutex locks
-98b4baf08a2a cpu_input_boost: Specify some variables as read-mostly
-9584033f1f96 cpu_input_boost: Replace auto-freq finder with sysfs interface
-8c6c8fc1d93c cpu_input_boost: Prioritize primary CPU
-f2f1fbb68949 cpufreq: Introduce CPU input boost driver
-0e5d85444948 wakeup: add some wakelocks from cheeseburger
-5592d741f17e drivers: wakeup: allow to request and count wakelocks with screen on.
-30fc4a94257b drivers: wakeup: allow 1 wakeup from IPA_WS every now and then
-70ad608e0b74 drivers: wakeup: be more thorough with blocking wakelocks
-4ac0661d399e drivers: wakeup: it's pointless to output the active wakeup sources during screen on, no need to go through the rcu locks and list iterations every now and then
-21253e1dac98 drivers: wakeup: there's no much point in running the blockers during screen on
-00a31b8b7cd4 drivers: wakeup: run the wakelock blockers during wakeup_source activation and every resume
-59ad8533013b drivers: wakeup: more thoroughly deactivation of wakelocks
-d406ab578323 drivers: wakeup: add options to disable timerfd, netlink and wlan wakelocks
-2130695b403b drivers: wakeup: bypass two WiFi wakelocks
-4d6e2740283b power: wakeup: prevent IPA_WS wakelock from being acquired by default
-b34a9d9fc5e0 Enable USB fast charge by default
-79fd134a2a86 drivers: misc: implement usb fast charge mode
-3fc936dedca7 block: add zen scheduler
-88476126d0ec Stop appending commit sha to kernel string
-
-====================
-     01-10-2018
-====================
-
-
-   * frameworks/base/
-6dc83b40c54 QS tile titles visibility [1/2]
-6cefd2dc850 Add feature extensions
-5bf18fdc342 frameworksï¼šAdd zh-rCN
 
    * hardware/qcom/audio/
-ab021d4 audio: Hacks for sound trigger
-
-   * kernel/oneplus/msm8996/
-42e7192711cb Merge remote-tracking branch 'linux/linux-3.18.y' into o2
-cbabe7be492d Omni -> Nos
-
-   * packages/apps/NitrogenSettings/
-4bee064 QS tile titles visibility [2/2]
-871ea9e Update Turkish translation
-
-====================
-     01-09-2018
-====================
-
-
-   * device/xiaomi/kenzo/
-eab12b6 overlay: Import boost framework config from Xiaomi Max
-edc656c Revert "Import power hal"
-
-   * frameworks/base/
-685c91305bf DarkUI: Fix colors on some dialogs
-2e50393203d SystemDarkThemeOverlay: Revert last commits for dark text fix
-157d2eefac5 BoostFramework: Add debug to hide logcat spam on devices without QPerfomance
-afeaba91d10 SystemUI: force a clock update if the screen is turned back on
-5bce7042c83 Activity: Improve DragBoost logic
-d65d28d02bc BoostFramework: Remove debug boost prop dependency
-e9bb33b6eb4 BoostFramework: Implement asynchronous processing of perflocks
-9ef573debed Add synchronized protection in BoostFramework constructor
-07093792160 frameworks: Add custom boost for scroll/fling
-2159ea6eff7 Perf: Adding hooks for IO prefetcher into framework
-6c052ea66e8 BoostFramework to enhance performance during critical  scenarios
-
-   * frameworks/opt/net/wifi/
-b5dbb7a0a Revert "WifiController: Set the sleep policy to "never""
-
-   * packages/apps/NitrogenSettings/
-efc38ec Revert "Fix dialog colors for dark and black themes"
-
-   * packages/apps/Settings/
-87163090e5 Revert "Bluetooth: Force black text when editing device name"
-0cfeee36cc WifiSleep: Return some translations
-fdb13c3918 Revert "Remove Sleep options from Advanced wifi."
-d996961e13 Wifi: Restore hidden flag for hidden networks on update network
-3b04beb8b3 Enable power save config of system apps [2/2]
-
-   * packages/inputmethods/LatinIME/
-473a1cc62 Add Hardslog light theme
-9cabf7ac4 few more tweaks for hs_dark to make it more material
-c5f18e38d New theme:  BLACKOUT
-2d9e27a02 Add new hardslog_dark theme
-
-   * packages/providers/DownloadProvider/
-30c26ca RU: fix
-
-   * vendor/oneplus/
-105af9f op3(t): add missed libdiag_system.so ims_media_jni: Error loading library lib-imsvt.so: dlopen failed: library "libdiag_system.so" not found
-
-====================
-     01-08-2018
-====================
-
-
-   * frameworks/base/
-37158589205 Fix volume rocker skip track on Ambient Display and Lift to Wake
-93ce56cc37c base: fix double volume events on screen off
-f036d180a78 Flashlight toggle api improvements
-a14c0a6e428 SystemUI: Prevent NPE in Dependency.get() in BrightnessController
-
-====================
-     01-07-2018
-====================
-
-
-   * device/xiaomi/kenzo/
-4650e43 Update sk translation
-6196bb0 gps: fix build again
-
-   * frameworks/base/
-d0ce387e078 Update cs and sk translation
-
-   * packages/apps/NitrogenSettings/
-ab09ba4 NitrogenSettingsï¼šUpdate zh_rCN
-7a9f643 Update cs and sk translation
-
-   * packages/apps/Settings/
-acb6296e1d Settings: Add nitrogen_strings.xml zh_rCN
-e0d33db0e5 Update cs and sk translation
-3b0cad1181 Bluetooth: Force black text when editing device name
-
-   * system/nfc/
-65954d4 bcm2079x: Add checks to prevent NULL pointer deference in gki_init_free_queue()
-b6d1d4f bcm2079x: Replace pthread_exit with return to avoid memory leak
-4ef64ed bcm2079x: [DNM] Hardcode nci_ctrl_size to Nougat value
-9da47cf bcm2079x: fix crash in userial_close_thread()
-c7ea634 bcm2079x: fix chip id format strings
-
-====================
-     01-06-2018
-====================
-
-
-   * build/make/
-0c2059a31 target: Build black theme
-06295824b target: overlays: Refactor sysui overlay to system [2/2]
-5720efea8 core: Build Settings Dark UI overlay
-
-   * frameworks/av/
-3f5c81374 audio: hold effect mutex when releasing effect engine
-fd98f4f0b audiopolicy: fix unexpected output selection for direct pcm usecase
-e6127170b audiopolicy: fix wrong volume db value for voice call stream
-c6635e7fa audioflinger: fix for playback paused during track transition
-dfe6b15c1 audio: Update anchor time for offload playback post resume
-dd2bf2a28 audio flinger: Fix native crash during underruns for patch track
-
-   * frameworks/base/
-f87b0975857 ColorOM: Support black theme
-6eecc12fc15 DarkMode: add default attributes for settings
-50adc3f3940 Darkmode: Don't override textColorPrimaryInverse
-235627b3fd2 base: add support for dark overlays
-
-   * packages/apps/NitrogenSettings/
-439e200 Fix dialog colors for dark and black themes
-caa9fcb Revert "[2/2] configure SystemUI theme"
-e00d5cc Clean translations and fix RU
-
-   * packages/apps/Settings/
-57a54e5fef ColorOM: Support black theme
-7af27a2312 Settings: Expose suggestions background color
-8aaa616a16 Settings: Introduce Color Manager (ColorOM)
-569a119ff6 ThemePreference: Disable inconsistent null check for availibility
-6aae486de3 ThemePreferenceController: Remove generic dark overlay from list
-
-   * system/vold/
-6c1cb7b keymaster: Add support for upgrade_key for FDE
-
-   * vendor/nitrogen/
-986bb0c add support for building custom themes
-
-====================
-     01-05-2018
-====================
-
-
-   * bionic/
-76c6d0f3b Merge tag 'android-8.1.0_r7' into o2
-
-   * bootable/recovery/
-753735d Merge tag 'android-8.1.0_r7' into o2
-
-   * build/make/
-bd1681c66 Merge tag 'android-8.1.0_r7' into o2
-c19c46a6c [1/2] build: add OTA script do delete package cache
-
-   * build/soong/
-b82cc1a Merge tag 'android-8.1.0_r7' into o2
-
-   * device/xiaomi/kenzo/
-c6aa2a3 rootdir: rework rmt_storage run
-
-   * frameworks/av/
-f42f2d895 Merge tag 'android-8.1.0_r7' into o2
-
-   * frameworks/base/
-4091a8160c5 Merge tag 'android-8.1.0_r7' into o2
-
-   * frameworks/native/
-a667de3e4 Merge tag 'android-8.1.0_r7' into o2
-
-   * frameworks/opt/telephony/
-8433c3230 Merge tag 'android-8.1.0_r7' into o2
-
-   * hardware/interfaces/
-8c2a5408 Merge tag 'android-8.1.0_r7' into o2
-
-   * hardware/qcom/audio/
-86eb06a Merge tag 'android-8.1.0_r7' into o2
-
-   * hardware/qcom/display/
-774b827c Merge tag 'android-8.1.0_r7' into o2
-
-   * hardware/qcom/gps/
-a31ae2c Merge tag 'android-8.1.0_r7' into o2
+6a5d4d0a audio: Use kernel headers
 
    * hardware/qcom/media/
-fd93494 Merge tag 'android-8.1.0_r7' into o2
+250c793 media: Use kernel headers
 
-   * hardware/ril/
-8b97203 Merge tag 'android-8.1.0_r7' into o2
+====================
+     01-28-2018
+====================
 
-   * packages/apps/DeskClock/
-8feaf4bfe Merge tag 'android-8.1.0_r7' into o2
 
-   * packages/apps/Messaging/
-a88648d Merge tag 'android-8.1.0_r7' into o2
+   * build/make/
+703d6505d Remove ro.com.android.dataroaming from OVERRIDES
 
-   * packages/apps/PackageInstaller/
-76df283a Merge tag 'android-8.1.0_r7' into o2
+   * hardware/qcom/keymaster/
+2c71ee6 keymaster: Use kernel headers
 
    * packages/apps/Settings/
-f2843f1c54 Merge tag 'android-8.1.0_r7' into o2
-
-   * packages/inputmethods/LatinIME/
-db139d165 Merge tag 'android-8.1.0_r7' into o2
-
-   * packages/services/Telecomm/
-98e4e3fe Merge tag 'android-8.1.0_r7' into o2
-
-   * packages/services/Telephony/
-814724da Merge tag 'android-8.1.0_r7' into o2
-
-   * system/bt/
-0f3c36e9 Merge tag 'android-8.1.0_r7' into o2
-
-   * system/core/
-569ffde9d Merge tag 'android-8.1.0_r7' into o2
-
-   * system/extras/
-66d35924 Merge tag 'android-8.1.0_r7' into o2
-
-   * system/hwservicemanager/
-315df2b Merge tag 'android-8.1.0_r7' into o2
-
-   * system/media/
-c28abae8 Merge tag 'android-8.1.0_r7' into o2
-
-   * system/nfc/
-9301948 Merge tag 'android-8.1.0_r7' into o2
-
-   * system/sepolicy/
-17294e21 Merge tag 'android-8.1.0_r7' into o2
-
-   * system/vold/
-9374469 Merge tag 'android-8.1.0_r7' into o2
-
-   * vendor/nitrogen/
-f5243a3 [2/2] omni: add OTA script do delete package cache
+c425bf64a8 APN: let user decide what he wants to do * allow add button and Revert "Disallow adding/editing dun APNs unless allowed by carrier."
 
 ====================
-     01-04-2018
+     01-27-2018
 ====================
 
 
+   * build/make/
+54f81d6c1 Revert "kernel: Handle kernel modules correctly"
+
+   * packages/apps/Settings/
+60f8546e96 Kill the logspam due to BackupSettingsActivity
+ccb39dad51 Revert "Kill the logspam due to BackupSettingsActivity"
+
 ====================
-     01-03-2018
+     01-26-2018
 ====================
 
+
+   * build/make/
+082126d7e build: Stop installing the sample APN list
+
+   * device/oneplus/oneplus3/
+4dc0149 Move apns config to vendor
+1ccb9d9 overlay: Configure fingerprint sensor location * op3: fix fp location by Grarak
+c50a400 sepolicy: update
+
+   * device/xiaomi/kenzo/
+84847ea Move apn-conf.xml to vendor
+
+   * frameworks/base/
+578e955182c Fix brightness slider under Settings/Display
+1f7a6a8b92f SystemUI: Hide NFC from statusbar icons if NFC isn't available
 
    * kernel/oneplus/msm8996/
-788ccf7552c8 Linux 3.18.91
-95a9e2bf54b8 n_tty: fix EXTPROC vs ICANON interaction with TIOCINQ (aka FIONREAD)
-6b3d91d5b507 usb: xhci: Add XHCI_TRUST_TX_LENGTH for Renesas uPD720201
-2a8c1cf8f57b usb: add RESET_RESUME for ELSA MicroLink 56K
-98372ee1e8d0 usb: Add device quirk for Logitech HD Pro Webcam C925e
-07f841060653 USB: serial: option: add support for Telit ME910 PID 0x1101
-000c7141a1fe net: ipv4: fix for a race condition in raw_sendmsg
-986444eaddc5 sctp: Replace use of sockets_allocated with specified macro.
-a11d92b0779d net: mvmdio: disable/unprepare clocks in EPROBE_DEFER case
-13550e44cf62 tg3: Fix rx hang on MTU change with 5717/5719
-f07f65cdff98 tcp md5sig: Use skb's saddr when replying to an incoming segment
-c0311793a848 net: qmi_wwan: add Sierra EM7565 1199:9091
-5594e3eba3ee netlink: Add netns check on taps
-70d931c38016 net: igmp: Use correct source address on IGMPv3 reports
-ee26de88cb43 ipv6: mcast: better catch silly mtu values
-c8b5bd50bfad ipv4: igmp: guard against silly MTU values
-20a0462fffaf kbuild: add '-fno-stack-check' to kernel build options
-c8d7e04ac14c ASoC: twl4030: fix child-node lookup
-5beacbc73691 ring-buffer: Mask out the info bits when returning buffer page length
-42c1b3e6f205 tracing: Fix crash when it fails to alloc ring buffer
-f9e16c238bd6 tracing: Fix possible double free on failure of allocating trace buffer
-973b645673b6 tracing: Remove extra zeroing out of the ring buffer page
-d0473d5cca66 net: mvneta: clear interface link status on port disable
-b907723a77bd powerpc/perf: Dereference BHRB entries safely
-02952cd43e16 KVM: X86: Fix load RFLAGS w/o the fixed bit
-96a44e59c94d parisc: Hide Diva-built-in serial aux and graphics card
-59a2e05a53a6 PCI / PM: Force devices to D0 in pci_pm_thaw_noirq()
-f11d60dc210f ALSA: usb-audio: Fix the missing ctl name suffix at parsing SU
-db66b2dc2c8b ALSA: rawmidi: Avoid racy info ioctl via ctl device
-8651a4705a0a mfd: twl6040: Fix child-node lookup
-d3cc4822354d mfd: twl4030-audio: Fix sibling-node lookup
-19ddbcf647c7 crypto: mcryptd - protect the per-CPU queue with a lock
-4aee80b3d1c9 ACPI: APEI / ERST: Fix missing error handling in erst_reader()
+088c33e014e4 drivers:usb:gadget: Set product_string for Android Auto
+a2b8534c945f msm: qdsp6v2: Allow 320K AAC encoding
+cb5393a5cc74 ASoC: core: Don't assign an out-of-bounds address to rtd_aux
+dc5fd93a1151 arm: dts: Remove MSM watchdog IPI ping in msm8996
+56702c010fd6 DTS: Enable wakeup events for the volume keys
+
+   * packages/apps/Settings/
+4acb8f91d3 fingerprint: Allow devices to configure sensor location
+ebf753c17f Settings: Add package name to installed app details
+255b6e0667 IMS: Do not disable WiFi Calling for "registration error"
+27f1dfcaf8 Settings: Remove vertical divider from MasterSwitchPreference battery saver pref, wifi, bt and etc. before: https://imgur.com/a/HGj5h after: https://imgur.com/a/YDZvQ
+
+   * system/sepolicy/
+e9cf655d sepolicy: add toolbox exception to entrypoints
+f1879298 Allow zygote to create cgroups files
+
+   * vendor/nitrogen/
+85b3f0a Add apn-conf.xml
+
+====================
+     01-25-2018
+====================
+
+
+   * build/make/
+2a22da480 kernel.mk: treat append_dtb as warning
+381a035f0 kernel: Handle kernel modules correctly
+53f5e73ed kernel: Allow building dtbo.img
+2cc3867b1 tasks: kernel: Add support for Clang kernel builds
+cfdb41fd2 lineage: build: kernel: Rework kernel module logic
+6c2c0bb5b kernel: clean up this madness
+6069a046b tasks: kernel: Kill unexisting wiki reference
+f1d0773e0 kernel: Add savedefconfig target
+3e9318a97 kernel: Fix broken C_INCLUDE_PATH for Darwin
+6060cc10b kernel: Include openssl headers and dylibs on darwin
+239415ff0 build: kernel: build arm kernel modules with -fno-pic
+3f0fa4a7d CM -> Lineage
+b6da8f133 build: kernel: Set prefix based on KERNEL_ARCH
+b892e8308 Always create a kernel defconfig build artifact
+4c66383c9 kernel: Default to androidkernel toochains
+b078d586a build: use the system's ccache by default
+f060b8936 kernel: default to gcc 4.9; auto-set prefix based on TARGET_ARCH
+478579c38 kernel: Add MAKE_FLAGS to kernel header generation
+1c91150c3 kernel: Fix libelf location on nougat
+08e827a70 build: Inline kernel building as a buildtime task
+00de73967 Clean kernel.mk
+
+   * frameworks/base/
+43383513377 Add Italian translations
+2e9a7db8c0d DUI: remove stock navbar drawables
+
+   * packages/apps/Settings/
+1b8acd1746 Kill the logspam due to BackupSettingsActivity
+
+====================
+     01-24-2018
+====================
+
+
+   * frameworks/base/
+b7b5d83d78e Weather: hide lockscreen weather when dozing
+2baf270eb90 Revert "Weather: hide lockscreen weather when dozing"
+b3659b6ef83 Ambient ticker: make it work if secure lockscreen notifs are blocked
+15c5d26e204 Ambient display music ticker [1/2]
+f13a68e1bd5 Port ambient Now Playing container from Pixel [stripped down version]
+
+   * kernel/oneplus/msm8996/
+741f47cda245 defconfig: CONFIG_IP_NF_TARGET_TTL
+
+   * packages/apps/Settings/
+7bf398aeb1 Settings: add footer info for ambient display music ticker
+eac72712c1 Settings: Ambient display music ticker
+
+   * system/core/
+760111f13 Allow adb root even in no debuggable builds
+
+   * vendor/nitrogen/
+6c3427f sepolicy: fix bootloop with theme avc: denied { open } for path="/system/priv-app/Settings/Settings.apk" dev="sde20" ino=88353 scontext=u:r:system_server:s0 tcontext=u:object_r:media_rw_data_file:s0 tclass=file permissive=0 type=1400 audit(0.0:32): avc: denied { read } for name="Settings.apk" dev="sde20" ino=88353 scontext=u:r:idmap:s0 tcontext=u:object_r:media_rw_data_file:s0 tclass=file permissive=0
+
+====================
+     01-23-2018
+====================
+
+
+   * device/oneplus/oneplus3/
+bd04908 wifi: Update WCNSS_qcom_cfg.ini from latest beta
+94709d1 overlay: Enable ManualSubProvisioning
+
+   * packages/apps/NitrogenSettings/
+4a75fe9 Fixed typo in nitrogen_strings.xml
+891ffbd Update Spanish translation
+fcf1662 Add Italian translations
+
+   * packages/apps/Settings/
+58836b4357 DoubletapPowerForCamera disabled by default [1/2]
+ffd61d1e70 SimSettings: Disable ManualSubProvisioning by default
+3117b355dc Settings: fix neverending progress on sim activation change
+
+====================
+     01-22-2018
+====================
+
+
+   * device/oneplus/oneplus3/
+6ed2f72 init.qcom.power: Update profile by Sasha (Inkyz \ SyCreed)
+
+   * frameworks/base/
+cd8db8842ed pocket: Add hardware acceleration and properly maintain SYSTEM_UI flags
+8244618b226 pocket judge: disable by default
+582b494ae90 PocketService: Adjust light sensor rate to 400ms
+58dfa2113f3 PhoneWindowManager: Block screenshots when pocket lock is showing
+386dde155ba pocket lock: Remove fingerprint events and gestures disabling it causes random bug with fp unlocking
+43247a918ef policy: introduce pocket lock * Block touch screen and keys inputs when device is in pocket. * Safe-door to disable pocket lock within long press power button if sensors do not behave correctly after PocketManager.isDeviceInPocket() returns true. * Window uses TYPE_SYSTEM_ERROR flag with ensure high priority over the lockscreen and other high priority windows. * Do not illuminate buttons when pocket lock is showing. * Disable fingerprint events and gestures when in pocket * Be friendly towards Keypress Boost
+ff318a3f62f pocket: introduce pocket judge * Judge if device is in pocket. * Notify clients callbacks when pocked state changes. * Start listening when device becomes not interactive. * Stop listening when device becomes interactive and is NOT in pocket.
+10d9486d190 Revert "KeyguardHostView: Dismiss keyguard automatically when face is recognized" Cause trouble with fp unlock when using smart unlock
+fe563ecd913 Update PL translation
+3140acce9f2 Optimize code of multithread installation
+302652311ab Use multithread to verify files contained in APK
+
+   * packages/apps/Dialer/
+eee2cdefe Add PL translation
+
+   * packages/apps/Gallery2/
+eba4c464c Add PL translation
+
+   * packages/apps/Launcher3/
+253b2fb11 Add PL translation
+
+   * packages/apps/NitrogenSettings/
+c7068dd TR: Update nitrogen_strings.xml
+ce35284 Return pocket judge
+de2ba74 Update PL translation
+
+   * packages/apps/OmniJaws/
+361a9fc Update PL translation
+
+   * packages/apps/Settings/
+71cc34d8a4 Update PL translation
+
+   * packages/apps/Terminal/
+5ca15b1 Add PL translation
+
+   * packages/services/Telephony/
+4ad20705 Fix non-protected broadcasts sent from phone process.
+
+====================
+     01-21-2018
+====================
+
+
+   * device/xiaomi/kenzo/
+5a9e842 msm8974: gps: Unlock the GPS
+
+   * packages/apps/Settings/
+6a8118cce8 Settings: no need to show a success alert dialog on sim switch
+
+   * packages/services/Telephony/
+ed5ef429 Telephony: Disable toast for Supplementary Service Notification
+
+====================
+     01-20-2018
+====================
+
+
+   * device/xiaomi/kenzo/
+4bf38d2 XiaomiParts: fix AlertDialog color
+106ccc5 device: add telephony-ext to BOOT_JARS
+
+   * frameworks/base/
+f420ee6a4fa Recents FAB: fix theming
+
+   * frameworks/opt/telephony/
+d72a7cd86 Revert "Use Material Light theme for AlertDialog"
+
+   * packages/apps/Bluetooth/
+42efd35e HeadsetClientStateMachine: Add divide-by-zero checks for bluetooth volume handling for amVol and hfVol.
+
+   * packages/apps/Settings/
+874b4cc3ee Settings: vectorize ic_live_help icon and fix theming for SimDialogActivity
+5d0982d3ca MultiSim: Fix hardcoded text color
+8d5861d8ac SimSettings: Correctly disabling sim switch without sim card
+
+   * packages/services/Telephony/
+3716a046 Fix theming
