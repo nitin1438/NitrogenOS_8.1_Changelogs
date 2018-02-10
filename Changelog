@@ -1,16 +1,61 @@
 ====================
+     02-10-2018
+====================
+
+
+   * external/strace/
+e5a85071 Revert "Update strace to 4.18."
+
+   * hardware/qcom/media/
+790d40d Revert "mm-video: venc: Correct a typo in variable name"
+4772deb mm-video: venc: Correct a typo in variable name
+
+====================
+     02-09-2018
+====================
+
+
+   * frameworks/base/
+e6cd11e2c3f Buttons: Use key action binding framework on lockscreen
+675c88a5d7d Themes: Add more dialogs Thanks to @Mazda-- and @jhenrique09
+
+   * hardware/qcom/media/
+32f6a67 Merge branch 'o2' of https://github.com/nitins-taimen/android_hardware_qcom_media into HEAD
+
+   * packages/apps/Settings/
+70142497ea Themes: Fix BT pair dialog
+
+====================
+     02-08-2018
+====================
+
+
+   * frameworks/base/
+e1aea6c8677 Add a one time QS dialog for the caffeine tile
+01e287496ea Remove other options off the Caffeine QS Tile but infinite
+81080a0945e Ambient music ticker improvements
+
+====================
+     02-07-2018
+====================
+
+
+   * system/sepolicy/
+1c830565 sepolicy: Allow system apps to access selinuxfs
+
+====================
      02-06-2018
 ====================
 
 
    * build/make/
 02c39322e Merge tag 'android-8.1.0_r14' into o2
-0f93b1fa9 Build DUI themes
 
    * frameworks/av/
 38175918d Merge tag 'android-8.1.0_r14' into o2
 
    * frameworks/base/
+47db41a7401 Theme safe boot dialog
 fd59e73a55f SimColors: Use _800 color Default Dialer color is <color name="dialer_theme_color">#2A56C6</color> Use <color name="Blue_800">#ff2a56c6</color> for consistent
 dd1c3526190 Merge tag 'android-8.1.0_r14' into o2
 264d6e2becd Update zh_rCN translation
@@ -20,6 +65,27 @@ d22af4c9845 Theme DUI dialogs & things
 
    * hardware/interfaces/
 50b48c02 Merge tag 'android-8.1.0_r14' into o2
+
+   * hardware/qcom/display/
+781f37b2 Include kernel headers irrespective of the board type
+
+   * packages/apps/NitrogenSettings/
+ac4064a Update zh_rCN translation
+
+   * packages/apps/Settings/
+5cd2398e6b Merge tag 'android-8.1.0_r14' into o2
+98309e5e3d Update zh_rCN translation
+
+   * packages/providers/DownloadProvider/
+9b41243 Merge tag 'android-8.1.0_r14' into o2
+
+====================
+     02-05-2018
+====================
+
+
+   * build/make/
+0f93b1fa9 Build DUI themes
 
    * kernel/oneplus/msm8996/
 11274296710b oneplus3_defconfig: Remove CONFIG_WLAN_FEATURE_RX_WAKELOCK -  WLAN_FEATURE_HOLD_RX_WAKELOCK feature acquires 50 ms wake lock   for every rx  data packet. - Remove this feature such that we can avoid wake lock for every    RX data packet.
@@ -35,23 +101,12 @@ dca4b92 Update PL translation
 a803b8d Add PL translation
 
    * packages/apps/NitrogenSettings/
-ac4064a Update zh_rCN translation
 4d30c0a Update PL translation
 
    * packages/apps/Settings/
-5cd2398e6b Merge tag 'android-8.1.0_r14' into o2
-98309e5e3d Update zh_rCN translation
 4ce08e99c3 Themes: Fix ActivityPicker
 a45b8e57f7 Update PL translation
 4af5822588 DUI: Fix theming custom action dialog
-
-   * packages/providers/DownloadProvider/
-9b41243 Merge tag 'android-8.1.0_r14' into o2
-
-====================
-     02-05-2018
-====================
-
 
 ====================
      02-04-2018
@@ -60,6 +115,13 @@ a45b8e57f7 Update PL translation
 
    * frameworks/base/
 cc703842b77 Recents FAB: fix theming
+
+====================
+     02-03-2018
+====================
+
+
+   * frameworks/base/
 0cb36456ae9 SystemUI: Add data saver icon to blacklist
 6b9bb1ba426 Themes: use accent color from light theme
 
@@ -67,12 +129,12 @@ cc703842b77 Recents FAB: fix theming
 891844c themes: add material_deep_teal_500 color to fix light theme
 
 ====================
-     02-03-2018
+     02-02-2018
 ====================
 
 
-   * hardware/qcom/camera/
-497dd48 common: include Kernel Headers
+   * frameworks/base/
+5958780f841 Add api to force show led lights
 
    * hardware/qcom/keymaster/
 2c6e773 keymaster: Use kernel headers
@@ -90,12 +152,14 @@ b2e2a5b Color picker: allow to activate ongoing led light as color preview
 
    * packages/apps/Settings/
 8febdee14a Disable useless alpha slider for notification lights color picker
+b94ee1b2d6 App notification led customization: activate led preview
+a5ec416ce3 SimSettings: Handle NoClassDefFoundError on devices without telephony-ext
 
    * vendor/nitrogen/
 5e83c72 vendor: add network list overlay
 
 ====================
-     02-02-2018
+     02-01-2018
 ====================
 
 
@@ -103,7 +167,6 @@ b2e2a5b Color picker: allow to activate ongoing led light as color preview
 9ee3b4a overlay: use stock oxygen auto brightness values
 
    * frameworks/base/
-5958780f841 Add api to force show led lights
 69c00c4bddf Add auth framework for outgoing SMS messages.
 019af1c2d19 SystemUI: fix ambient display when HeadsUp disabled
 6ada97dbdf3 CamcorderProfiles: Add new profiles for recorder
@@ -150,10 +213,6 @@ a4798adea Modify access specifiers to enable OMH
 f16e45e15 Use subscription info for ImsManager queries.
 f873ca637 Revert "Use Material Light theme for AlertDialog"
 
-   * packages/apps/Settings/
-b94ee1b2d6 App notification led customization: activate led preview
-a5ec416ce3 SimSettings: Handle NoClassDefFoundError on devices without telephony-ext
-
    * packages/services/Telephony/
 0ce0e6fa Add TD-SCDMA related network mode options
 88719784 Fix theming
@@ -162,127 +221,3 @@ d14bdad6 Telephony: use SettingsLib styles
 
    * vendor/nitrogen/
 f6c98e8 Give overlays their own priority level
-
-====================
-     02-01-2018
-====================
-
-
-   * device/oneplus/oneplus3/
-1e0e2da init.qcom.power: Use cfq and increase boost freq and enable sched_boost
-
-   * frameworks/av/
-4695153e2 CamcorderProfiles: Add new camcorder profiles
-
-   * kernel/oneplus/msm8996/
-90aaf2f25609 Linux 3.18.93
-7303968d5396 hrtimer: Reset hrtimer cpu base proper on CPU hotplug
-6c16fa957e84 ipv4: Make neigh lookup keys for loopback/point-to-point devices be INADDR_ANY
-fd3030090c8d ipv6: fix udpv6 sendmsg crash caused by too small MTU
-98fcfb3f64a0 net: Allow neigh contructor functions ability to modify the primary_key
-1414a1ede0ea vmxnet3: repair memory leak
-e34d42ce65b5 sctp: return error if the asoc has been peeled off in sctp_wait_for_sndbuf
-8009d86cc944 sctp: do not allow the v4 socket to bind a v4mapped v6 address
-0e4c26c86060 pppoe: take ->needed_headroom of lower device into account on xmit
-d8dee18861fb net: qdisc_pkt_len_init() should be more robust
-eaf3179d6151 tcp: __tcp_hdrlen() helper
-483217b88c63 net: igmp: fix source address check for IGMPv3 reports
-607506a8e7b0 dccp: don't restart ccid2_hc_tx_rto_expire() if sk in closed state
-cf1a60fdfadc net: tcp: close sock if net namespace is exiting
-8e292f88f756 x86/microcode/intel: Extend BDW late-loading further with LLC size check
-933e32f87f6e eventpoll.h: add missing epoll event masks
-bdc0646c91cd scsi: libiscsi: fix shifting of DID_REQUEUE host byte
-efa42537beb6 fs/fcntl: f_setown, avoid undefined behaviour
-1f31381a6cc0 reiserfs: don't preallocate blocks for extended attributes
-9ff49848ab5f reiserfs: fix race in prealloc discard
-115e3505bbd6 netfilter: xt_osf: Add missing permission checks
-f4ba1d0e4366 netfilter: nfnetlink_cthelper: Add missing permission checks
-f1a49458d9ef netfilter: nf_conntrack_sip: extend request line validation
-64f94c222f63 netfilter: restart search if moved to other chain
-38a8f8f7f6c6 netfilter: nf_ct_expect: remove the redundant slash when policy name is empty
-4003d8b836ab ipc: msg, make msgrcv work with LONG_MIN
-fee959e947ff hwpoison, memcg: forcibly uncharge LRU pages
-3e0f334aaf1f mm/mmap.c: do not blow on PROT_NONE MAP_FIXED holes in the stack
-7a3974ca1195 can: af_can: canfd_rcv(): replace WARN_ONCE by pr_warn_once
-16d977e9bbf4 can: af_can: can_rcv(): replace WARN_ONCE by pr_warn_once
-6b6f9e3d0044 usbip: Fix implicit fallthrough warning
-7b9da19c2ec9 x86/asm/32: Make sync_core() handle missing CPUID on all 32-bit kernels
-66b64a935853 MIPS: AR7: ensure the port type's FCR value is used
-0e88a123df05 arm64: KVM: Fix SMCCC handling of unimplemented SMC/HVC calls
-7ed7a1ce7e03 dm thin metadata: THIN_MAX_CONCURRENT_LOCKS should be 6
-2da34a807ad1 dm btree: fix serious bug in btree_split_beneath()
-e89b22a8b329 ARM: dts: kirkwood: fix pin-muxing of MPP7 on OpenBlocks A7
-40dfccf9bf37 phy: work around 'phys' references to usb-nop-xceiv devices
-b70f4ccbc41d Input: twl4030-vibra - fix sibling-node lookup
-5ada5b876313 Input: twl4030-vibra - fix ERROR: Bad of_node_put() warning
-12d0592008fd Input: twl6040-vibra - fix child-node lookup
-e9765832134f Input: twl6040-vibra - fix DT node memory management
-a499bc7e0351 Input: 88pm860x-ts - fix child-node lookup
-d3c49810dc8d pipe: avoid round_pipe_size() nr_pages overflow on 32-bit
-cf1feaf5e555 af_key: fix buffer overread in parse_exthdrs()
-60319ec10213 af_key: fix buffer overread in verify_address_len()
-82ddf73182bb ALSA: hda - Apply the existing quirk to iMac 14,1
-cdbebd4716bc ALSA: pcm: Remove yet superfluous WARN_ON()
-ad211e59c683 futex: Prevent overflow by strengthen input validation
-7cb4b6064217 scsi: sg: disable SET_FORCE_LOW_DMA
-3758d94e9513 gcov: disable for COMPILE_TEST
-
-====================
-     01-31-2018
-====================
-
-
-   * packages/apps/NitrogenSettings/
-09351c8 Add toggle for face auto unlock (2/2)
-
-   * packages/apps/Settings/
-f9f10054e4 Prevent users from sharing sensitive information
-
-====================
-     01-30-2018
-====================
-
-
-   * kernel/oneplus/msm8996/
-205dcab55dfd cfq: fix starvation of asynchronous writes
-a8330ec5f050 cfq-iosched: Charge at least 1 jiffie instead of 1 ns
-e94661455478 cfq-iosched: Fix regression in bonnie++ rewrite performance
-455440c27027 cfq-iosched: Convert slice_resid from u64 to s64
-c79d6227c3e2 cfq-iosched: temporarily boost queue priority for idle classes
-b25fcf279d5a cfq-iosched: Convert to use highres timers
-555cce45ddfe cfq-iosched: Expose microsecond interfaces
-54023ce36853 cfq-iosched: Convert from jiffies to nanoseconds
-3ef758547ec3 cfq-iosched: Allow parent cgroup to preempt its child
-c37afbd52510 cfq-iosched: Allow sync noidle workloads to preempt each other
-c3a30e4db55e cfq-iosched: Reorder checks in cfq_should_preempt()
-c9444d79dfef cfq-iosched: Don't group_idle if cfqq has big thinktime
-a3d005dfbe79 cfq-iosched: fix the setting of IOPS mode on SSDs
-3663296b26dc block: Make CFQ default to IOPS mode on SSDs
-a930f2282b37 cfq-iosched: fix the setting of IOPS mode on SSDs
-0039fa28b801 block: Make CFQ default to IOPS mode on SSDs
-
-====================
-     01-29-2018
-====================
-
-
-   * external/ntfs-3g/
-4138e34 ntfs-3g: Fix build
-
-   * packages/apps/NitrogenSettings/
-5bd28ac [2/2] base: Bring back less notification sounds
-
-   * packages/apps/Settings/
-5d0e095d43 Update Italian translation
-
-====================
-     01-28-2018
-====================
-
-
-   * build/make/
-703d6505d Remove ro.com.android.dataroaming from OVERRIDES
-54f81d6c1 Revert "kernel: Handle kernel modules correctly"
-
-   * packages/apps/Settings/
-c425bf64a8 APN: let user decide what he wants to do * allow add button and Revert "Disallow adding/editing dun APNs unless allowed by carrier."
