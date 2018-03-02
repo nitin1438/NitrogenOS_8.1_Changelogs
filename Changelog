@@ -2,25 +2,7 @@
      2018-03-01
 ====================
 
- * build/make
-a0e6a70  Merge branch 'o2' of https://github.com/nitrogen- */android_build_make into HEAD  [nitin1438]
-
- * frameworks/base
-beb5256  Revert "Check VintfObject compatibility on boot"  [Christian Oder]
-d185566  SystemUI: Port Now Playing feature from Pixel [1/2]  [Joe Maples]
-5be385f  Revert "Port ambient Now Playing container from Pixel [stripped down version]"  [nitin1438]
-5af9942  Revert "Ambient display music ticker [1/2]"  [nitin1438]
-a44dacf  Revert "Ambient ticker: make it work if secure lockscreen notifs are blocked"  [nitin1438]
-fe083b4  Revert "Ambient music ticker improvements"  [nitin1438]
-02ce3a0  Revert "pocket: introduce pocket judge"  [nitin1438]
-5f9aedc  Revert "policy: introduce pocket lock"  [nitin1438]
-dbce5e8  Revert "pocket lock: Remove fingerprint events and gestures disabling it causes random bug with fp unlocking"  [nitin1438]
-a71a83d  Revert "PhoneWindowManager: Block screenshots when pocket lock is showing"  [nitin1438]
-292eb29  Revert "PocketService: Adjust light sensor rate to 400ms"  [nitin1438]
-a34a9eb  Revert "pocket judge: disable by default"  [nitin1438]
-385281b  Revert "pocket: Add hardware acceleration and properly maintain SYSTEM_UI flags"  [nitin1438]
-
- * packages/apps/Settings
+* packages/apps/Settings
 154451b  Fix square battery view in Battery  [xyyx]
 86a3adf  Update PL  [Daviteusz]
 2773c61  Settings: inherit battery meter style in view [2/2]  [Nick Reuter]
