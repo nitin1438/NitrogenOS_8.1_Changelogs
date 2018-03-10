@@ -2,6 +2,28 @@
      2018-03-08    
 ====================
 
+ * vendor/nitrogen
+58f238d Add OTA for taimen
+3ca9dba Merge branch 'o2' of https://github.com/nitrogen-project/android_vendor_nitrogen into HEAD
+
+ * device/google/taimen
+409ba76  Merge branch 'cr-6.1' of https://github.com/CarbonROM/android_device_google_taimen into cr-6.1
+10d1146  taimen: update fingerpint to OPM1.171019.021 
+
+ * device/google/wahoo
+ac9ec95 Merge tag 'android-8.1.0_r15' of https://android.googlesource.com/device/google/wahoo into HEAD
+
+ * kernel/google/wahoo
+161390c  Merge branch 'cr-6.1' of https://github.com/CarbonROM/android_kernel_google_wahoo into cr-6.1
+
+ * vendor/google
+44810bf Merge branch 'cr-6.1' of https://github.com/obsd39/proprietary_vendor_google into cr-6.1
+012ff3d taimen: update blobs to OPM1.171019.021
+
+====================
+     2018-03-08    
+====================
+
  * external/strace
 dea7dc1  Revert "Update strace to 4.18."  [nitin1438]
 
